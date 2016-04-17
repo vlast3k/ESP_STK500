@@ -7,3 +7,9 @@ The wiring is simple. One wire is connected to the arduino RST pin, and then two
 A smillar implementation for java can be found here
 https://github.com/Cloudino/Cloudino-engine/blob/master/src/main/java/io/cloudino/utils/HexSender.java
 This is where i looked up the commands for the STK500 protocol (As well as the actual bootloader source of course)
+
+The current example works by reading files uploaded previously to SPIFFS.
+As of now those are not the HEX files from Arduino IDE itself, but rather an intermediate format.
+That one is produced by running the Java program from the java/ folder.
+
+As a next step i plan to port also this logic to the ESP, so that standard HEX files can be used w/o the need of conversion
